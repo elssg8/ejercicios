@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: black
 }
 
 input[type=number] {
@@ -30,3 +30,42 @@ input[type=text] {
     margin-right: 150px;
     margin-left: 400px;
 }
+
+
+/* Improving the looking and functionality of the calculator app */
+/* make the grid for the calculator */
+.calculadora{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+/* make the grid for the calculator, the items 0 to 9, dot and equals should be slightly wider than the rest */
+.item0, .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9, 
+.division, .mult, .subst, .dot, .equals, .sum, .clear{
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(64, 125, 35);
+    border-radius: 5px;
+}
+
+/* make the input fill 3 of the 4 columns */
+#display{
+    grid-column: 1 / span 3;
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    border-radius: 5px;
+}
+
+/* make the buttons with no border */
+button{
+    border: none;
+}
+
