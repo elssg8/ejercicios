@@ -36,6 +36,8 @@ function dividir() {
 let buttons = document.querySelectorAll('button');
 let display = document.getElementById('display');
 
+display.value = '';
+
 // Variable para almacenar la operación actual
 let operation = '';
 let operand1 = '';
@@ -43,14 +45,37 @@ let operand2 = '';
 let clearNext = false;
 let hasOperation = false;
 
+/* desactivar los botones /, *, -, +, c, = al inicio, y activarlos hasta que se ingrese un digito */
+const ids = ['div', 'mult', 'subst', 'sum', 'clear', 'equals'];
+const hasSign = ['div', 'mult', 'subst', 'sum'];
+botonesDesactivados = () => {
+    ids.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.disabled = true;
+        }
+    });
+}
+
+botonesActivados = () => {
+    ids.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.disabled = false;
+        }
+    });
+}
+
+
+botonesDesactivados();
 // Agrega un detector de eventos a cada botón
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         let value = button.getAttribute('data-value');
         
-
         if (value === 'c') {
             // Si el botón es 'c', limpia el display y las variables
+            botonesDesactivados();
             display.value = '';
             operation = '';
             operand1 = '';
@@ -82,6 +107,7 @@ buttons.forEach(button => {
             operand2 = '';
             //clearNext = true;
         } else {
+            botonesActivados();
             // Si el botón es un número o un punto, añádelo al display
             if (clearNext) {
                 display.value = '';
@@ -100,3 +126,5 @@ buttons.forEach(button => {
         }
     });
 });
+
+

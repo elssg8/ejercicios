@@ -37,8 +37,8 @@ input[type=text] {
 }
 
 /* make the grid for the calculator, the items 0 to 9, dot and equals should be slightly wider than the rest */
-.item0, .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9, 
-.division, .mult, .subst, .dot, .equals, .sum, .clear{
+.btn-item0, .btn-item1, .btn-item2, .btn-item3, .btn-item4, .btn-item5, .btn-item6, .btn-item7, .btn-item8, .btn-item9, 
+.btn-division, .btn-mult, .btn-subst, .btn-dot, .btn-equals, .btn-sum, .btn-clear{
     padding: 10px;
     margin: 0px;
     text-align: center;
@@ -77,3 +77,8 @@ button:active{
     color: black;
 }
 
+button:disabled{
+    background-color: rgb(90, 90, 90);
+    color: black;
+    cursor: not-allowed;
+}
