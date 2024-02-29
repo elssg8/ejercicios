@@ -47,6 +47,7 @@ let hasOperation = false;
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         let value = button.getAttribute('data-value');
+        
 
         if (value === 'c') {
             // Si el botón es 'c', limpia el display y las variables
@@ -61,6 +62,7 @@ buttons.forEach(button => {
             hasOperation = true;
         } else if (value === '=') {
             // Si el botón es '=', realiza la operación
+            hasOperation = false;
             switch (operation) {
                 case '/':
                     display.value = parseFloat(operand1) / parseFloat(operand2);
@@ -87,11 +89,12 @@ buttons.forEach(button => {
             }
 
             if (!hasOperation) {
-                operand1 = value;
+                operand1 += value;
+                console.log('Operand1' + operand1);
             }
             else{
-                operand2 = value;
-                hasOperation = false;
+                operand2 += value;
+                console.log('Operand2' + operand2);
             }
             display.value += value;
         }
