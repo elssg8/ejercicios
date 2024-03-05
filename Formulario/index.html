@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="contactForm" class="form">
+        <h2 class="form__title">Formulario</h2>
+
+        <div class="form__container">
+            <div class="form__group">
+                <label for="name" class="form__label">Nombre:</label>
+                <input type="text" class="form__input" id="name" name="name">
+                <div class="error" class="form__error" id="nameError"></div>
+            </div>
+
+            <div class="form__group">
+                <label for="address" class="form__label">Dirección:</label>
+                <input type="text" class="form__input" id="address" name="address">
+                <div class="error" class="form__error" id="addressError"></div>
+            </div>
+
+            <div class="form__group">
+                <label for="phone" class="form__label">Teléfono:</label>
+                <input type="tel" class="form__input" id="phone" name="phone">
+                <div class="error" class="form__error" id="phoneError"></div>
+            </div>
+
+            <div class="form__group">
+                <label for="email" class="form__label">Correo:</label>
+                <input type="email" class="form__input" id="email" name="email">
+                <div class="error" class="form__error" id="emailError"></div>
+            </div>
+
+            <div class="form__group">
+                <label for="message" class="form__label">Mensaje:</label>
+                <textarea id="message" class="form__msg" name="message"></textarea>
+                <div class="error" class="form__error" id="messageError"></div>
+            </div>
+
+            <input type="submit" class="form__submit" value="Enviar">
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
