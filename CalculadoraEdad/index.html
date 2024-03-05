@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Calculadora de Edad</title>
+</head>
+<body>
+    <section class="calculadora__edad">
+        <div class="container">
+            <div class="row1">
+                <div class="inputs__zone">
+                    <div class="col1">
+                        <label for="input__day">Día</label>
+                        <input class="input__day" min="1" max="31" type="number">
+                    </div>
+    
+                    <div class="col2">
+                        <label for="input__month">Mes</label>
+                        <input class="input__month" min="1" max="12" type="number">
+                    </div>
+    
+                    <div class="col3">
+                        <label for="input__year">Año</label>
+                        <input class="input__year" max="2024" type="number">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row2">
+                <div class="result__zone">
+                    <input value="Calcular" id="btn__calcular" type="submit">
+                    <div class="result__age">
+                        <p>Años: <span id="years"></span></p>
+                    </div>
+    
+                    <div class="result__month">
+                        <p>Meses: <span id="months"></span></p>
+                    </div>
+    
+                    <div class="result__days">
+                        <p>Días: <span id="days"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
