@@ -126,5 +126,3 @@ buttons.forEach(button => {
         }
     });
 });
-
-
